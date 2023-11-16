@@ -1,14 +1,12 @@
-# yourapp/consumers.py
-
 import json
 from channels.generic.websocket import WebsocketConsumer
 
 class MyConsumer(WebsocketConsumer):
-    def connect(self):
-        self.accept()
 
-    def disconnect(self, close_code):
-        pass
+    def connect(self):
+        user = self.scope['user']
+        print(f'{user.__dict__ = }')
+        self.accept()
 
     def receive(self, text_data):
         # You can process the received message here

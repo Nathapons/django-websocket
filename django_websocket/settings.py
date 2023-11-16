@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     "daphne",
+    "oauth2_provider",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
